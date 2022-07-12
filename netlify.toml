@@ -1,5 +1,5 @@
 [dev]
-  command = "npm run dev" # Command to start your dev server
+  command = "npm start" # Command to start your dev server
   publish = "_site" # Folder with the static content for _redirect file
 
 [build]
@@ -11,17 +11,6 @@
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
-
-[[redirects]]
-  from = "/cloudinaried/:height/:sport/:image"
-  to = "https://res.cloudinary.com/andystevenson/image/fetch/c_scale,q_auto,f_auto,h_:height/https://raw.githubusercontent.com/andystevenson/wwsc-assets/master/images/:sport/:image"
-  status = 200
-
-[[redirects]]
-  from = "/cloudinaried/:sport/:image"
-  to = "https://res.cloudinary.com/andystevenson/image/fetch/c_scale,q_auto,f_auto/https://raw.githubusercontent.com/andystevenson/wwsc-assets/master/images/:sport/:image"
-  status = 200
-
 
 [[redirects]]
   from = "*"
