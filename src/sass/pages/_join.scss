@@ -1,0 +1,6 @@
+.join main {
+  & svg {
+    width: var(--size-5);
+    stroke: var(--brand);
+  }
+}

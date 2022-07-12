@@ -1,0 +1,6 @@
+.site {
+  display: grid;
+  gap: var(--size-fluid-1);
+  grid: auto 1fr auto / auto 1fr auto;
+  place-content: center;
+}
