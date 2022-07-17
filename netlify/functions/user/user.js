@@ -2,8 +2,9 @@
 const handler = async (event, context) => {
   try {
     const { clientContext } = context
+    console.log({ clientContext }, clientContext.user)
+
     const user = clientContext?.user?.email
-    console.log({ user })
     return {
       statusCode: 200,
       body: JSON.stringify({ user }),
