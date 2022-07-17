@@ -17,3 +17,8 @@
   to = "/not-found"
   status = 404
 
+
+
+# [[edge_functions]]
+# function = "user"
+# path = "/*"

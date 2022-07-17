@@ -1,12 +1,11 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 const handler = async (event, context) => {
   try {
-    const { identity } = context
-    console.log({ identity })
-    const subject = event.queryStringParameters.name || 'World'
+    const { clientContext } = context
+    console.log({ context })
     return {
       statusCode: 200,
-      body: JSON.stringify({ identity }),
+      body: JSON.stringify({ clientContext }),
       // // more keys you can return:
       // headers: { "headerName": "headerValue", ... },
       // isBase64Encoded: true,
